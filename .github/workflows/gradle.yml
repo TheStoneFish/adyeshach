@@ -40,7 +40,9 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: adyeshach
-        path: "build-resources/*.jar"  
+        path: |
+          **/*.jar
+          !**/.*/**/*.jar
         retention-days: 7
     - name: List Root Directory Files
       run: |
